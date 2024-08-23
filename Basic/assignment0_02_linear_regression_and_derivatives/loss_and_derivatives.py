@@ -113,7 +113,7 @@ class LossAndDerivatives:
         else:
             target_dimentionality = 1
         
-         -(X.T).dot(np.sign(Y - X.dot(w))) / (X.shape[0] * target_dimentionality)
+         return -(X.T).dot(np.sign(Y - X.dot(w))) / (X.shape[0] * target_dimentionality)
 
     @staticmethod
     def l2_reg_derivative(w):
